@@ -13,7 +13,7 @@ router.post('/', (request, response, next) => {
       if (contact) return response.redirect(`/contacts/${contact[0].id}`)
       next()
     })
-    .catch( error => renderError(error, response, response) )
+    .catch( error => renderError(error, response) )
 })
 
 router.get('/:contactId', (request, response, next) => {
@@ -24,7 +24,7 @@ router.get('/:contactId', (request, response, next) => {
       if (contact) return response.render('show', { contact })
       next()
     })
-    .catch( error => renderError(error, response, response) )
+    .catch( error => renderError(error, response) )
 })
 
 
@@ -35,7 +35,7 @@ router.get('/:contactId/delete', (request, response, next) => {
       if (contact) return response.redirect('/')
       next()
     })
-    .catch( error => renderError(error, response, response) )
+    .catch( error => renderError(error, response) )
 })
 
 router.get('/search', (request, response, next) => {
@@ -45,7 +45,7 @@ router.get('/search', (request, response, next) => {
       if (contacts) return response.render('index', { query, contacts })
       next()
     })
-    .catch( error => renderError(error, response, response) )
+    .catch( error => renderError(error, response) )
 })
 
 module.exports = router
