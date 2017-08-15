@@ -1,9 +1,10 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const dbContacts = require('./db/contacts')
-const app = express()
-const {renderError} = require('./server/utils')
+const { renderError } = require('./server/utils')
 const routes = require('./server/routes');
+
+const app = express()
 
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views')
@@ -21,7 +22,7 @@ app.use((request, response) => {
   response.status(404).render('not_found')
 })
 
-const port = process.env.PORT || 3000
+const port = process.env.NODE_ENV === 'test' ? process.env.TEST_PORT : process.env.DEV_PORT
 app.listen(port, () => {
   console.log(`http://localhost:${port}`)
 })
