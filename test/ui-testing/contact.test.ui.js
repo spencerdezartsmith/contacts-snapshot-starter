@@ -3,8 +3,6 @@ const expect = require('chai').expect
 const test = require('selenium-webdriver/testing')
 const webdriver = require('selenium-webdriver')
 const By = webdriver.By
-const until = require('selenium-webdriver').until
-
 
 test.describe('UI testing', function() {
   this.timeout(5000)
