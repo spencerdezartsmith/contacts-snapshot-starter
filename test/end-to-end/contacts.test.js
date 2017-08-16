@@ -49,7 +49,7 @@ describe('Routes', function() {
       .send({ wrong: 'Spencer', key: 'Dezart-Smith' })
       .end(function(error, response) {
         expect(response).to.have.status(422)
-        expect(response.text).to.contain("ERROR: Cannot read property 'id' of undefined")
+        expect(response.text).to.contain('ERROR: Cannot read property \'id\' of undefined')
         done()
       })
   })
