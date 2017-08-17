@@ -16,6 +16,6 @@ In this testing snapshot I use mocha, http-chai, chai expect, and selenium-webdr
 
 # Example
 
-![](http://g.recordit.co/y3XSnQcagM.gif)
+Click on [this link](http://g.recordit.co/y3XSnQcagM.gif) to see a working example.
 
 <hr>
