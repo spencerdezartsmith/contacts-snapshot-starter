@@ -16,6 +16,6 @@ In this testing snapshot I use mocha, http-chai, chai expect, and selenium-webdr
 
 # Example
 
-Please follow [this link](http://recordit.co/F5u8ywoU1o) to see the live tests in action.
+![](http://g.recordit.co/y3XSnQcagM.gif)
 
 <hr>
