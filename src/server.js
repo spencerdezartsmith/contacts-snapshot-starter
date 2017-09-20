@@ -28,7 +28,7 @@ const env = process.env.NODE_ENV
 
 if (env === 'test') {
   port = process.env.TEST_PORT
-} else (env === 'development') {
+} else {
   port = process.env.DEV_PORT
 }
 
