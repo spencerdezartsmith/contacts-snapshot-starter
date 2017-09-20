@@ -20,4 +20,4 @@ Click on [this link](http://g.recordit.co/y3XSnQcagM.gif) to see a working examp
 
 <hr>
 
-[ ![Codeship Status for spencerdezartsmith/testing-snapshot](https://app.codeship.com/projects/e65aa9c0-8058-0135-5a57-221f76a05333/status?branch=master)](https://app.codeship.com/projects/246670)
+[ ![Codeship Status for spencerdezartsmith/testing-snapshot](https://app.codeship.com/projects/d0ff1490-806f-0135-d850-728b5cad98a8/status?branch=master)](https://app.codeship.com/projects/246702)
