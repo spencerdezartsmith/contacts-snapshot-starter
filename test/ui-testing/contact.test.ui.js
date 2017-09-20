@@ -9,7 +9,7 @@ test.describe('UI testing', function() {
   const driver = new webdriver.Builder().forBrowser('chrome').build()
 
   test.it('/contacts/new should render an add contact form', function() {
-    driver.get('http://localhost:8080/contacts/new')
+    driver.get('http://localhost:3010/contacts/new')
     driver.findElement(By.id('new-contact-form'))
       .then(formEl => formEl.isDisplayed())
       .then(isformDisplayed => {
@@ -22,13 +22,13 @@ test.describe('UI testing', function() {
     this.timeout(5000)
     const driver = new webdriver.Builder().forBrowser('chrome').build()
 
-    driver.get('http://localhost:8080/contacts/new')
+    driver.get('http://localhost:3010/contacts/new')
     driver.findElement(By.name('first_name')).sendKeys('Spencer').then(() => {
       driver.findElement(By.name('last_name')).sendKeys('Dezart-Smith').then(() => {
         driver.findElement(By.xpath('/html/body/div[1]/div/form/input')).click().then(() => {
           driver.getCurrentUrl()
             .then((url) => {
-              expect(url).to.equal('http://localhost:8080/contacts/4')
+              expect(url).to.equal('http://localhost:3010/contacts/4')
               driver.quit()
             })
         })
@@ -40,7 +40,7 @@ test.describe('UI testing', function() {
     this.timeout(5000)
     const driver = new webdriver.Builder().forBrowser('chrome').build()
 
-    driver.get('http://localhost:8080/')
+    driver.get('http://localhost:3010/')
     driver.findElements(By.className('contact-link')).then((contactLinks) => {
       expect(contactLinks.length).to.equal(4)
       driver.quit()
@@ -51,7 +51,7 @@ test.describe('UI testing', function() {
     this.timeout(5000)
     const driver = new webdriver.Builder().forBrowser('chrome').build()
 
-    driver.get('http://localhost:8080/')
+    driver.get('http://localhost:3010/')
     driver.findElement(By.xpath('/html/body/div[1]/div/div/div[2]/a[2]')).click().then(() => {
       driver.switchTo().alert().accept()
       driver.findElements(By.className('contact-link')).then((contactLinks) => {
@@ -65,7 +65,7 @@ test.describe('UI testing', function() {
     this.timeout(5000)
     const driver = new webdriver.Builder().forBrowser('chrome').build()
 
-    driver.get('http://localhost:8080')
+    driver.get('http://localhost:3010')
     driver.findElement(By.name('q')).sendKeys('ne' + '\n').then(() => {
       driver.findElement(By.className('contact-link')).then((contactLink) => {
         contactLink.getText().then((text) => {
