@@ -23,14 +23,8 @@ app.use((request, response) => {
   response.status(404).render('not_found')
 })
 
-let port;
-const env = process.env.NODE_ENV
-
-if (env === 'test') {
-  port = process.env.TEST_PORT
-} else (env === 'development') {
-  port = process.env.DEV_PORT
-}
+const localPort = process.env.NODE_ENV === 'test' ? process.env.TEST_PORT : process.env.DEV_PORT
+const port = process.env.PORT || localPort
 
 app.listen(port, () => {
   console.log(`http://localhost:${port}`)
