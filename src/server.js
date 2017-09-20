@@ -28,10 +28,8 @@ const env = process.env.NODE_ENV
 
 if (env === 'test') {
   port = process.env.TEST_PORT
-} else if (env === 'development') {
+} else (env === 'development') {
   port = process.env.DEV_PORT
-} else {
-  port = process.env.NODE_ENV
 }
 
 app.listen(port, () => {

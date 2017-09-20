@@ -4,6 +4,6 @@ module.exports = (env) => {
   } else if (env === 'test') {
     return process.env.DB_TEST_URL
   } else {
-    return 'postgresql-asymmetrical-15975'
+    return process.env.DATABASE_URL
   }
 }
