@@ -2,8 +2,6 @@ const expect = require('chai').expect
 const dbContacts = require('../../../src/db/contacts')
 const dbHelper = require('../../helpers/db')
 
-console.log('!!!!!process', process.env.CI)
-
 describe('Integration Tests', function() {
   beforeEach('truncate and seed the DB before each test', function() {
     return dbHelper.initDB()
