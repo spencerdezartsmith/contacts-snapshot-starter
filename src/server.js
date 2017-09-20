@@ -26,8 +26,6 @@ app.use((request, response) => {
 const localPort = process.env.NODE_ENV === 'test' ? process.env.TEST_PORT : process.env.DEV_PORT
 const port = process.env.PORT || localPort
 
-console.log('!!!!!process', process.env.CI)
-
 app.listen(port, () => {
   console.log(`http://localhost:${port}`)
 })

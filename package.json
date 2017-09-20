@@ -11,6 +11,7 @@
     "load_contacts": "psql -d contacts_development < test/seed/contacts.sql",
     "test:db:setup": "dropdb contacts_test && createdb contacts_test && npm run test:db:schema",
     "test:db:schema": "psql -d contacts_test < src/db/schema/schema.sql",
+    "test:db:ci": "psql -d test < src/db/schema/schema.sql",
     "test": "NODE_ENV=test mocha --recursive"
   },
   "keywords": [],
