@@ -23,14 +23,15 @@ app.use((request, response) => {
   response.status(404).render('not_found')
 })
 
-const env = process.env.NODE_ENV === 'test' ? process.env.TEST_PORT : process.env.DEV_PORT
+let port;
+const env = process.env.NODE_ENV
 
 if (env === 'test') {
-  return process.env.TEST_PORT
+  port = process.env.TEST_PORT
 } else if (env === 'development') {
-  return process.env.DEV_PORT
+  port = process.env.DEV_PORT
 } else {
-  return process.env.NODE_ENV
+  port = process.env.NODE_ENV
 }
 
 app.listen(port, () => {
