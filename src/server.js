@@ -25,7 +25,7 @@ app.use((request, response) => {
 
 const port = process.env.NODE_ENV === 'test' ? process.env.TEST_PORT : process.env.DEV_PORT
 app.listen(port, () => {
-  console.log(`http://localhost:${port}`) // eslint-disable-line no-console
+  console.log(`http://localhost:${port}`)
 })
 
 module.exports = app
