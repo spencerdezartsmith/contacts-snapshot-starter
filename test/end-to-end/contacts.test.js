@@ -6,6 +6,8 @@ const app = require('../../src/server.js')
 
 chai.use(chaiHttp)
 
+console.log('!!!!!process.env.DB_CI_URL', process.env.DB_CI_URL)
+
 describe('Routes', function() {
   beforeEach('truncate tables and seed', function() {
     return dbHelpers.initDB()
